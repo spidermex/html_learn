@@ -1,0 +1,88 @@
+.allbrowser {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.workarea {
+  margin-top: 100px;
+  width: 100%;
+  background-color: rgb(119, 100, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.myheader {
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.myheader h1 {
+  text-align: center;
+  background-color: rgb(119, 100, 78);
+}
+
+.myheader p {
+  flex-basis: 100%;
+  text-align: center;
+  color: yellow;
+  background-color: rgb(119, 100, 78);
+}
+
+.inputsection {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.inputsection input {
+  text-align: center;
+}
+
+.principal {
+  margin-top: 5%;
+  width: 100%;
+  background-color: rgb(119, 100, 78);
+}
+
+.mylista {
+  width: 100%;
+  background-color: rgba(216, 231, 200, 0.5);
+  font-weight: bold;
+}
+
+.mylista li:hover {
+  color: rgb(74, 93, 179);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.myboton {
+  position: absolute;
+  right: 1%;
+  border-radius: 35%;
+  font-size: 0.7em;
+  color: rgba(39, 37, 160, 0.8);
+  background-color: rgba(233, 184, 143, 0.2);
+}
+
+.done {
+  color: rgb(158, 134, 88);
+  text-decoration: line-through;
+}
+
+.mylista li {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2px;
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.instructions {
+   color: yellow;
+   font-weight: bold;
+}
