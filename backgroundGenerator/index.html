@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Gradient Background</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe"
+      crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
+      crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="gradient">
+   <div class="container">
+      <div class="d-flex flex-column align-items-center">
+         <div class="header row">
+            <h1>Background Generator</h1>
+         </div>
+         <div class="colores d-flex flex-row justify-content-center">
+            <input class="color1" type="color" name="color1" value="#00ff00">
+            <input class="color2" type="color" name="color2" value="#ff0000">
+         </div>
+         <div class="info row">
+            <h2>Current CSS Background</h2>
+         </div>
+         <div class="info1 row ">
+            <h3 id="infoGrad"></h3>
+            <button id="crystalBut" title="Copy to clipboard"><span class="fas fa-clipboard-check"></span></button>
+         </div>
+         <div class="botonera row">
+            <div class="col">
+               <button id="original" class="btn myBoton">Back to Original</button>
+            </div>
+            <div class="col">
+               <button id="rancolor" class="btn myBoton">Random choice</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

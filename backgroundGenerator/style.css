@@ -1,0 +1,86 @@
+body {
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+   background: linear-gradient(to right,red,yellow);
+}
+
+h1 {
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+}
+
+h2 {
+   font: 600 2.0em 'Raleway', sans-serif;
+   color: rgba(0,0,0,.5);
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: .5em;
+   width: 100%;
+}
+
+h3 {
+	font: 900 1.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.colores {
+   width: 100%;
+}
+.color1, .color2 {
+   height: 50px;
+   width: 150px;
+   padding: 1px;
+   margin-left: 10%;
+   margin-right: 10%;
+   margin-bottom: 5%;
+}
+
+.myBoton {
+   height: 40px;
+   width: 130px;
+   padding: 1px;
+   color: white;
+   font-weight: bold;
+   background-color: red;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 40px;
+}
+
+.header {
+   width: 100%;
+   margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+.info{
+   margin-top: 3%;
+}
+
+.info1{
+   margin-top: 1%;
+   border-style: solid;
+}
+
+
+#crystalBut {
+   font-size: 1.5em;
+   color: orange;
+   height: 100%;
+   margin-left: 3px;
+   border: 0;
+   background: none !important;
+   box-shadow: none;
+   border-radius: 0px;
+}
