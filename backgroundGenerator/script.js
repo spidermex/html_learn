@@ -50,13 +50,12 @@ function randomColor() {
 function randomizeColors(){
    color1.value=randomColor();
    color2.value=randomColor();
-   var botones=document.querySelectorAll("button");
-   botones[0].style.backgroundColor=randomColor();
-   botones[1].style.backgroundColor=randomColor();
+   botReload.style.backgroundColor=color2.value;
+   botRandom.style.backgroundColor=color1.value;
    setGradient();
    }
 
-//Since the teacher gave us the colors in WORD/NAME on the original CSS style ...grrrr
+//Since we were given the colors in WORD/NAME on the original CSS style ...grrrr
 // we have to convert those names to their correspondent HEX values
 function getHexColor(colorStr) {
    var a = document.createElement('div');
@@ -74,7 +73,6 @@ function getHexColor(colorStr) {
 
 function componentToHex(c) {
    var hex = c.toString(16);
-   console.log("valor a convertir", hex);
    return hex.length == 1 ? "0" + hex : hex;
 }
 
@@ -86,7 +84,7 @@ function setOrigGradient() {
    color1.value=col1Orig;
    color2.value=col2Orig;
    botRandom.style.backgroundColor=col1Orig;
-   botReload.style.backgroundColor=col1Orig;
+   botReload.style.backgroundColor=col2Orig;
    setGradient();
 }
 // Function to retrieve the ORIGINAL colors from the CSS style on PageLoad
@@ -94,26 +92,24 @@ function setOrigGradient() {
 // convert them to HEX and assign theem to the corresponding starting values .... grrrrr...
 function getOriginalgradient() {
    var myStyle = window.getComputedStyle(mybody, null).getPropertyValue("background-image");
-   console.log("Color Values", myStyle);
+   //console.log("Color Values", myStyle);
    if (myStyle.indexOf("rgb") !== -1) {
       var res = myStyle.split("linear-gradient")[1].split(",");
       res.splice(0, 1);
       myStyle = res.toString();
-      console.log("cad2", myStyle);
       var col1 = myStyle.split("rgb(")[1].split("),", 1)[0].split(", ");
       var col2 = myStyle.split("rgb(")[2].split(")", 1)[0].split(", ");
-      console.log("color1: rgb(" + col1[0] + ',' + col1[1] + ',' + col1[2] + ")");
-      console.log("color2: rgb(" + col2[0] + ',' + col2[1] + ',' + col2[2] + ")");
       color1.value = rgbToHex(parseInt(col1[0]), parseInt(col1[1]), parseInt(col1[2]));
       color2.value = rgbToHex(parseInt(col2[0]), parseInt(col2[1]), parseInt(col2[2]));
    } else {
       var res = myStyle.split('linear-gradient(')[1].split(')', 1)[0].split(",");
       color1.value = getHexColor(res[1]);
       color2.value = getHexColor(res[2]);
-      console.log("fue palabra");
    }
    col1Orig=color1.value;
    col2Orig=color2.value;
+   botRandom.style.backgroundColor=col1Orig;
+   botReload.style.backgroundColor=col2Orig;
    setGradient();
 }
 

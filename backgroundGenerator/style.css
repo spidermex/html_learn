@@ -5,7 +5,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .5em;
     top: 15%;
-   background: linear-gradient(to right,red,yellow);
+   background: linear-gradient(to right,green,yellow);
 }
 
 h1 {
@@ -49,13 +49,18 @@ h3 {
 .myBoton {
    height: 40px;
    width: 130px;
-   padding: 1px;
-   color: white;
+   padding: 0px;
+   color: rgba(0, 0, 0, 0.5);
    font-weight: bold;
-   background-color: red;
+   background-color: green ;
    margin-left: 20px;
    margin-right: 20px;
    margin-top: 40px;
+}
+
+.myBoton span {
+   background-color: rgba(236, 214, 172, 0.3);
+   padding: 5px;
 }
 
 .header {
@@ -71,6 +76,9 @@ h3 {
 .info1{
    margin-top: 1%;
    border-style: solid;
+   background-color: rgba(209, 205, 181,0.2);
+   font-style: italic;
+   
 }
 
 
