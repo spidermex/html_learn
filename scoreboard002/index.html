@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Match game ScoreBoard</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="initialize_displays()">
+
+    <div class="contenedor">
+        <h1><b><u>Match game ScoreBoard</u></b></h1>
+    </div>
+    <div class="contenedor">
+        <div id="main" style="background-color:#1B244A" ;>
+            <div class="renglon10" style="align-items: center; justify-content: center;">
+                <!-- <h3>SCORE-0-MATIC</h3> -->
+            </div>
+            <div class="renglon10">
+                <div class="columna">
+                    <h3>HOME</h3>
+                </div>
+                <div class="columna">
+                    <h3>Time</h3>
+                </div>
+                <div class="columna">
+                    <h3>GUEST</h3>
+                </div>
+            </div>
+            <div class="renglon90" style="height: 25%;">
+                <div class="columna">
+                    <div class="renglon30">
+                        <h4 id="score_home">25</h4>
+                    </div>
+                </div>
+                <div class="columna" style="display: block;">
+                    <div class="renglon30x100" style="width: 100%;">
+                        <h5 id="game_time">12:32</h5>
+                    </div>
+                    <div style="display: flex; align-items: center; align-content: center; height: 45%;">
+                        <div class="columna">
+                            <button id="btn_start" class="miniButton" onclick="startTimer()">Start</button>
+                        </div>
+                        <div class="columna">
+                            <button id="btn_stop" class="miniButton" onclick="stopTimer()">Stop</button>
+                        </div>
+                        <div class="columna">
+                            <button id="btn_reset" class="miniButton" onclick="reset_game()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div class="renglon30">
+                        <h4 id="score_guest">6</h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="renglon10">
+                <div class="columna">
+                    <div class="miniBtnPanel">
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(1,'home')">+1</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(2,'home')">+2</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(3,'home')"><span>+3</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="win_select" class="columna">
+                    <div class="columna" style="display: block;">
+                        <div style="display: flex; align-items: center; height: 50%; width: 100%;">
+                            <h6 id="win_home" style="font-size: 20px;">•</h6>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; align-content: center; height: 50%; width: 100%;">
+                            <h6 id="tout_home" onclick="to_process('home')">0</h6>
+                        </div>
+                    </div>
+                    <div class="columna" style="display: block;">
+                        <div style="display: flex; align-items: center; height: 50%; width: 100%;">
+                            <p>WIN</p>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; align-content: center; height: 50%; width: 100%;">
+                            <p>T/O</p>
+                        </div>
+                    </div>
+                    <div class="columna" style="display: block;">
+                        <div style="display: flex; align-items: center; height: 50%; width: 100%;">
+                            <h6 id="win_guest" style="font-size: 20px;">•</h6>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; align-content: center; height: 50%; width: 100%;">
+                            <h6 id="tout_guest" onclick="to_process('guest')">0</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="columna">
+                    <div class="miniBtnPanel">
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(1,'guest')">+1</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(2,'guest')">+2</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2" onclick="add_points(3,'guest')">+3</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="renglon30x100" style="height: 42%;">
+                <ul class="texto"> <u><b>Use:</b></u><br>
+                    <li>You can start/stop/reset the game Timer</li>
+                    <li>Reset button resets/restart score/TO's/Timer</li>
+                    <li>Each team has 4 timeOuts to use. Click on T/O number to stop timer.</li>
+                    <li>Click on the corresponding score/points button to add score per Team.</li>
+                    <li>The team that is ahead/winning is indicated with the corresponding WIN light on/off</li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
