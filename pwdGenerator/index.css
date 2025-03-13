@@ -1,0 +1,222 @@
+/* 
+.karla-<uniquifier> {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  .inter-<uniquifier> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+ */
+
+@font-face {
+    font-family: "Karla", sans-serif;
+    src: url('assets/Inter-VariableFont_opsz,wght.ttf-Aznm.ttf');
+}
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    ;
+    src: url('assets/Inter-VariableFont_opsz,wght.ttf-Aznm.ttf');
+}
+
+#container {
+    display: flex;
+    background-color: #1c1c1c;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    font-style: normal;
+}
+
+.contenedor {
+    display: flex;
+    background-color: #1f2937;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.appcontainer{
+    display: block; 
+    background-color: #1f2937; 
+    width: 550px; 
+    height: 550px; 
+}
+
+/* style="display: block; background-color: #1f2937; width: 550px; height: 550px; " */
+
+h1 {
+    display: flex;
+    justify-self: auto;
+    color: white;
+    padding-left: 30px;
+    /* background-color: aqua; */
+    margin-top: 60px;
+    margin-bottom: 1px;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    font-style: normal;
+}
+
+h2 {
+    color: #55f991;
+    /* background-color: red; */
+    padding-left: 30px;
+    margin: auto;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    font-style: normal;
+}
+
+.tagline {
+    color: #d5d4d8;
+    padding-left: 30px;
+    padding-top: 15px;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    font-style: normal;
+}
+
+.line1 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    border-color: #2f3e53;
+    border-width: 1px;
+    border-style:ridge;
+}
+
+.btnpwd {
+    display: flex;
+    background-color: #10b981;
+    border-radius: 6px;
+    width: 191px;
+    height: 42px;
+    padding-top: 9px;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-bottom: 9px;
+    gap: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: white;
+    margin-left: 30px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pwdout {
+    display: flex;
+    width: 211;
+    height: 39;
+    border: none;
+    border-radius: 6px;
+    background-color: #273549;
+    color: #55F991;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.pwdlen {
+    display: flex;
+    width: 40px;
+    height: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #273549;
+    color: #55F991;
+    margin: auto;
+    /* margin-top: 15px; */
+    padding: 4px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 85%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.7s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .label2 {
+    display: flex; 
+    justify-self: left; 
+    width: 80%; 
+    font-weight: 100;
+    font-size: 12px;
+    /* background-color: #10b981; */
+    color: white;
+    border: 1px solid #10b981;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* border-style: dotted; */
+
+  }
