@@ -1,0 +1,194 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: rgba(31, 41, 55, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Main container */
+  .converter-container {
+    background-color: rgba(31, 41, 55, 1);
+    display: flex;
+    max-width: 550px;
+    width: 100%;
+    padding-bottom: 35px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  /* Header section */
+  .converter-header {
+    background-color: rgba(105, 67, 255, 1);
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 34px 68px;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 800;
+  }
+  
+  .converter-title {
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.84px;
+    text-align: center;
+    align-self: stretch;
+    font-weight: 800;
+  }
+  
+  .conversion-input {
+    border-radius: 5px;
+    border: 2px solid rgba(178, 149, 255, 1);
+    margin-top: 41px;
+    /* width: 157px; */
+    max-width: 100%;
+    padding: 30px 22px 9px;
+    font-size: 58px;
+    text-align: center;
+    line-height: 1;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+  
+  .conversion-input:focus {
+    outline: none;
+    border-color: white;
+  }
+  
+  .convert-button {
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    margin-top: 25px;
+    width: 117px;
+    max-width: 100%;
+    padding: 9px 28px;
+    font-size: 16px;
+    color: #3d3d3d;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+  
+  .convert-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .convert-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Conversion results section */
+  .conversion-results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+  }
+  
+  .conversion-card {
+    border-radius: 5px 0px 0px 0px;
+    background-color: rgba(39, 53, 73, 1);
+    display: flex;
+    width: 100%;
+    padding: 29px 80px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .conversion-card:first-child {
+    margin-top: 36px;
+  }
+  
+  .conversion-card:not(:first-child) {
+    margin-top: 23px;
+  }
+  
+  .conversion-type {
+    color: rgba(204, 193, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  .conversion-result {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 13px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .converter-header {
+      max-width: 100%;
+      padding: 34px 20px;
+    }
+  
+    .conversion-input {
+      font-size: 40px;
+      padding: 30px 20px 9px;
+      margin-top: 40px;
+    }
+  
+    .convert-button {
+      padding: 9px 20px;
+    }
+  
+    .conversion-card {
+      max-width: 100%;
+      padding: 29px 20px;
+    }
+  }
+  
+  /* Accessibility improvements */
+  .convert-button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  
+  /* Remove number input arrows */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  

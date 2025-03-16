@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="converter-container">
+        <header class="converter-header">
+            <h1 class="converter-title">Metric/Imperial Unit Conversion</h1>
+            <input type="number" id="conversion-input" class="conversion-input" value="20" />
+            <button id="convert-btn" class="convert-button">Convert</button>
+        </header>
+
+        <main class="conversion-results">
+            <section class="conversion-card">
+                <h2 class="conversion-type">Length (Meter/Feet)</h2>
+                <p class="conversion-result" id="length-result">
+                    20 meters = 65.616 feet | 20 feet = 6.096 meters
+                </p>
+            </section>
+
+            <section class="conversion-card">
+                <h2 class="conversion-type">Volume (Liters/Gallons)</h2>
+                <p class="conversion-result" id="volume-result">
+                    20 liters = 5.284 gallons | 20 gallons = 75.708 liters
+                </p>
+            </section>
+
+            <section class="conversion-card">
+                <h2 class="conversion-type">Mass (Kilograms/Pounds)</h2>
+                <p class="conversion-result" id="mass-result">
+                    20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script src="index.js">  </script>
+</body>
+
+</html>
