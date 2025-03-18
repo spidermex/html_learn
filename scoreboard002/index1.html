@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Match game ScoreBoard</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="initialize_displays()">
+
+    <div class="contenedor">
+        <h1>Match game ScoreBoard</h1>
+    </div>
+    <div class="contenedor">
+        <div class="main">
+            <div class="renglon10">
+                <!-- <p>SCORE-0-MATIC</p> -->
+            </div>
+            <div class="renglon10">
+                <div class="columna">
+                    <p class="myh3">HOME</p>
+                </div>
+                <div class="columna">
+                    <p class="myh3">Time</p>
+                </div>
+                <div class="columna">
+                    <p class="myh3">GUEST</p>
+                </div>
+            </div>
+            <div class="renglon90 row25">
+                <div class="columna">
+                    <div class="renglon30">
+                        <p class="myh4 red-Font" id="score_home">25</p>
+                    </div>
+                </div>
+                <div class="renglon">
+                    <div class="renglon30x100">
+                        <d class="myh5 red-Font" id="game_time">12:32</d>
+                    </div>
+                    <div class="btns-container1">
+                        <div class="columna">
+                            <button id="btn_start" class="miniButton mini-Btn-Deco" onclick="startTimer()">Start</button>
+                        </div>
+                        <div class="columna">
+                            <button id="btn_stop" class="miniButton mini-Btn-Deco" onclick="stopTimer()">Stop</button>
+                        </div>
+                        <div class="columna">
+                            <button id="btn_reset" class="miniButton mini-Btn-Deco" onclick="reset_game()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div class="renglon30">
+                        <p class="myh4 red-Font" id="score_guest">6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="renglon10">
+                <div class="columna">
+                    <div class="miniBtnPanel">
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco" onclick="add_points(1,'home')">+1</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco" onclick="add_points(2,'home')">+2</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco"
+                                onclick="add_points(3,'home')"><span>+3</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="win_select" class="columna">
+                    <div class="renglon">
+                        <div class="win-panel">
+                            <p class="myh6 red-Font" id="win_home">•</p>
+                        </div>
+                        <div class="win-panel">
+                            <p class="myh6 red-Font" id="tout_home" onclick="timeOut_process('home')">0</p>
+                        </div>
+                    </div>
+                    <div class="renglon">
+                        <div class="win-panel">
+                            <p>WIN</p>
+                        </div>
+                        <div class="win-panel">
+                            <p>T/O</p>
+                        </div>
+                    </div>
+                    <div class="renglon">
+                        <div class="win-panel">
+                            <p class="myh6 red-Font" id="win_guest">•</p>
+                        </div>
+                        <div class="win-panel">
+                            <p class="myh6 red-Font" id="tout_guest" onclick="timeOut_process('guest')">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div class="miniBtnPanel">
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco" onclick="add_points(1,'guest')">+1</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco" onclick="add_points(2,'guest')">+2</button>
+                        </div>
+                        <div class="columna">
+                            <button class="miniButton2 mini-Btn-Deco" onclick="add_points(3,'guest')">+3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="renglon30x100 rowAuto">
+                <h2>How to Use it:</h2>
+                <ul class="texto">
+                    <li>You can start/stop/reset the game Timer</li>
+                    <li>Reset button resets/restart score/TO's/Timer</li>
+                    <li>Each team has 4 timeOuts to use. Click on T/O number to stop timer.</li>
+                    <li>Click on the corresponding score/points button to add score per Team.</li>
+                    <li>The team that is ahead/winning is indicated with the corresponding WIN light on/off</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
