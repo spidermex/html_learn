@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     margin: 0 auto;
     background-color:#1B244A;
-    max-width: 350px;
+    /* max-width: 350px; */
     border: 1px solid #c3c3c3;
 }
 
@@ -41,6 +41,7 @@ body {
     margin: 0 auto;
     padding: 5px 10px;
 }
+
 .minibtn{
     font-family: 'Cursed Timer ULiL';
     font-size: 0.6rem;
@@ -72,8 +73,7 @@ body {
 .touttext{
     font-size: 0.8rem;
     margin: 0 auto;
-    padding: 0px 10px;
-    
+    padding: 0px 10px;   
 }
 
 .winpanel{
@@ -83,6 +83,7 @@ body {
     margin-bottom: 5px;
     padding: 0;
 }
+
 .touttext2{
     font-size: 0.7rem;
     margin: 0 auto;
