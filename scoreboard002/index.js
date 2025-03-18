@@ -40,7 +40,7 @@ function initialize_displays() {
 }
 
 function add_points(howmany, who) {
-    if (who == "home") {
+    if (who === "home") {
         score_home += howmany;
         scoreHomeId.textContent = score_home;
     } else {
@@ -66,13 +66,13 @@ function whosWinning(){
 }
 
 function timeOut_process(who) {
-    if (who == "home" && tout_home > 0) {
+    if (who === "home" && tout_home > 0) {
         tout_home -= 1;
         toutHomeId.textContent = tout_home;
         playBuzzer();
         stopTimer();
     } else {
-        if (who == "guest" && tout_guest > 0) {
+        if (who === "guest" && tout_guest > 0) {
             tout_guest -= 1;
             toutGuestId.textContent = tout_guest;
             playBuzzer();
