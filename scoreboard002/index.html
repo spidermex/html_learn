@@ -9,33 +9,33 @@
 <body onload="initialize_displays()">
 
     <div class="contenedor">
-        <h1><b><u>Match game ScoreBoard</u></b></h1>
+        <h1>Match game ScoreBoard</h1>
     </div>
     <div class="contenedor">
         <div id="main" style="background-color:#1B244A" ;>
             <div class="renglon10" style="align-items: center; justify-content: center;">
-                <!-- <h3>SCORE-0-MATIC</h3> -->
+                <!-- <p>SCORE-0-MATIC</p> -->
             </div>
             <div class="renglon10">
                 <div class="columna">
-                    <h3>HOME</h3>
+                    <p class="myh3">HOME</p>
                 </div>
                 <div class="columna">
-                    <h3>Time</h3>
+                    <p class="myh3">Time</p>
                 </div>
                 <div class="columna">
-                    <h3>GUEST</h3>
+                    <p class="myh3">GUEST</p>
                 </div>
             </div>
             <div class="renglon90" style="height: 25%;">
                 <div class="columna">
                     <div class="renglon30">
-                        <h4 id="score_home">25</h4>
+                        <p class="myh4" id="score_home">25</p>
                     </div>
                 </div>
-                <div class="columna" style="display: block;">
+                <div class="columna"style="display: block;">
                     <div class="renglon30x100" style="width: 100%;">
-                        <h5 id="game_time">12:32</h5>
+                        <d class="myh5" id="game_time">12:32</d>
                     </div>
                     <div style="display: flex; align-items: center; align-content: center; height: 45%;">
                         <div class="columna">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="columna">
                     <div class="renglon30">
-                        <h4 id="score_guest">6</h4>
+                        <p class="myh4" id="score_guest">6</p >
                     </div>
                 </div>
 
@@ -73,11 +73,11 @@
                 <div id="win_select" class="columna">
                     <div class="columna" style="display: block;">
                         <div style="display: flex; align-items: center; height: 50%; width: 100%;">
-                            <h6 id="win_home" style="font-size: 20px;">•</h6>
+                            <p class="myh6" id="win_home" style="font-size: 20px;">•</p>
                         </div>
                         <div
                             style="display: flex; align-items: center; align-content: center; height: 50%; width: 100%;">
-                            <h6 id="tout_home" onclick="to_process('home')">0</h6>
+                            <p class="myh6" id="tout_home" onclick="timeOut_process('home')">0</p>
                         </div>
                     </div>
                     <div class="columna" style="display: block;">
@@ -91,11 +91,11 @@
                     </div>
                     <div class="columna" style="display: block;">
                         <div style="display: flex; align-items: center; height: 50%; width: 100%;">
-                            <h6 id="win_guest" style="font-size: 20px;">•</h6>
+                            <p class="myh6" id="win_guest" style="font-size: 20px;">•</p>
                         </div>
                         <div
                             style="display: flex; align-items: center; align-content: center; height: 50%; width: 100%;">
-                            <h6 id="tout_guest" onclick="to_process('guest')">0</h6>
+                            <p class="myh6" id="tout_guest" onclick="timeOut_process('guest')">0</p>
                         </div>
                     </div>
 
@@ -115,8 +115,9 @@
                 </div>
 
             </div>
-            <div class="renglon30x100" style="height: 42%;">
-                <ul class="texto"> <u><b>Use:</b></u><br>
+            <div class="renglon30x100" style="height: 42%; flex-direction: column;">
+                <h2 >How to Use it:</h2>
+                <ul class="texto">
                     <li>You can start/stop/reset the game Timer</li>
                     <li>Reset button resets/restart score/TO's/Timer</li>
                     <li>Each team has 4 timeOuts to use. Click on T/O number to stop timer.</li>

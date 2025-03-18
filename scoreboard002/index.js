@@ -1,14 +1,17 @@
 console.log("run");
 
 // Global variables
+const isOn= "rgb(169, 10, 10)";
+const isOff= "rgb(48, 47, 51)";
+const max_time = 720; // Time in seconds for timer
 let score_home = 0;
 let score_guest = 0;
 let game_time = "12:00";
 let tout_guest = 4;
 let tout_home = 4;
-let max_time = 720; // Time in seconds for timer
 let left_time = max_time;
 let the_timer; // Variable for timer
+
 
 //DOM content locations
 let scoreHomeId = document.getElementById("score_home");
@@ -21,20 +24,19 @@ let winGuestId = document.getElementById("win_guest");
 
 // Initialize Displays
 function initialize_displays() {
-    score_home = 0;
+    score_home=0;
     score_guest = 0;
     game_time = "12:00";
     tout_guest = 4;
     tout_home = 4;
-    max_time = 720;
     left_time = max_time;
     scoreHomeId.textContent = score_home;
     scoreGuestId.textContent = score_guest;
     gameTimeId.textContent = game_time;
     toutGuestId.textContent = tout_guest;
     toutHomeId.textContent = tout_home;
-    winGuestId.style.color = "rgb(48, 47, 51)";
-    winHomeId.style.color = "rgb(48, 47, 51)";
+    winGuestId.style.color = isOff;
+    winHomeId.style.color = isOff;
 }
 
 function add_points(howmany, who) {
@@ -45,53 +47,58 @@ function add_points(howmany, who) {
         score_guest += howmany;
         scoreGuestId.textContent = score_guest;
     }
+    whosWinning()
+}
 
-    if (score_guest == score_home) {
-        winGuestId.style.color = "rgb(48, 47, 51)";
-        winHomeId.style.color = "rgb(48, 47, 51)";
+function whosWinning(){
+    if (score_guest === score_home) {
+        winGuestId.style.color = isOff;
+        winHomeId.style.color = isOff;
     } else {
         if (score_home > score_guest) {
-            winGuestId.style.color = "rgb(48, 47, 51)";
-            winHomeId.style.color = "rgb(169, 10, 10)";
+            winGuestId.style.color = isOff;
+            winHomeId.style.color = isOn;
         } else {
-            winGuestId.style.color = "rgb(169, 10, 10)";
-            winHomeId.style.color = "rgb(48, 47, 51)";
+            winGuestId.style.color = isOn;
+            winHomeId.style.color = isOff;
         }
     }
 }
 
-function to_process(who) {
+function timeOut_process(who) {
     if (who == "home" && tout_home > 0) {
         tout_home -= 1;
         toutHomeId.textContent = tout_home;
-        new Audio("assets/buzzer.mp3").play();
+        playBuzzer();
         stopTimer();
     } else {
         if (who == "guest" && tout_guest > 0) {
             tout_guest -= 1;
             toutGuestId.textContent = tout_guest;
-            new Audio("assets/buzzer.mp3").play();
+            playBuzzer();
             stopTimer();
         }
     }
 }
 
+function playBuzzer() {
+    new Audio("assets/buzzer.mp3").play();
+}
 function reset_game() {
     console.log("reset click");
     initialize_displays();
 }
 
 function startTimer() {
-    the_timer = setInterval(cuentatime, 1000);
+    the_timer = setInterval(CountTime, 1000);
 }
 
 function stopTimer() {
     clearInterval(the_timer);
 }
 
-function cuentatime() {
+function CountTime() {
     let minutes, seconds;
-    //console.log(timer);
     minutes = parseInt(left_time / 60, 10)
     seconds = parseInt(left_time % 60, 10)
     minutes = minutes < 10 ? "0" + minutes : minutes
