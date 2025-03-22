@@ -1,4 +1,4 @@
-import { menuArray } from '/data.js'
+import { menuArray } from "./assets/datos.js"
 
 // DOM important objects
 const menuContainer = document.getElementById("menu-container")
