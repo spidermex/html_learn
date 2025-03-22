@@ -1,0 +1,285 @@
+body {
+  font-family: Smythe;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 600px;
+  border-left: 1px #999 solid ;
+  border-right: 1px #999 solid ;
+}
+
+header {
+  background: url('assets/burguer1.png');
+  background-size: cover;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Font sizes */
+.food-name,
+.order-item,
+.item-qty,
+.sum-text {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.food-desc {
+  font-size: 1.2rem;
+  color: #8b8b8b;
+}
+
+.remove-item-btn {
+  color: #bbbbbb;
+  font-size: 0.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.food-photo {
+  font-size: 3rem;
+}
+
+.food-price,
+.item-price,
+.order-sum {
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: left;
+  padding-top: 0.5em;
+  margin: auto 0 0 0.5em;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0.2em 0 0.5em 0;
+  padding: 0;
+}
+
+header p {
+  padding-left: 1em;
+  padding-bottom: 1em;
+  margin: auto 0;
+}
+
+.food-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-areas: "pic nam nam"
+    "pic des btn"
+    "pic pri btn";
+  padding: 0em;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
+  border-bottom: #999 1px solid;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.food-photo {
+  grid-area: pic;
+  text-align: center;
+  margin: auto 0;
+  padding: 0;
+}
+
+.food-name {
+  grid-area: nam;
+  margin: auto 0;
+}
+
+.food-desc {
+  grid-area: des;
+  margin: auto 0 auto 0;
+}
+
+.food-price {
+  grid-area: pri;
+  margin: 0;
+}
+
+.btn-add {
+  grid-area: btn;
+  font-size: 2rem;
+  border: 1px solid #999;
+  border-radius: 50%;
+  padding: 0.1em 0.3em;
+  margin: auto 0.5em auto auto;
+  color: #666;
+  cursor: pointer;
+}
+
+.btn-add:hover,
+.remove-item-btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+.order-detail {
+  text-align: center;
+  padding: 0 1em;
+  display: none;
+}
+
+.order-rows {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.7;
+}
+
+.order-row,
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  margin: 0;
+}
+
+
+.order-item,
+.item-qty .item-price,
+.order-total,
+.sum-text,
+.order-sum {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+
+.item-qty {
+  padding: 0 1em;
+}
+
+.order-total {
+  border-top: 1px solid #666;
+}
+
+.remove-item-btn {
+  background-color: white;
+  border: none;
+  padding: 0 0.3em;
+  margin: 0;
+  cursor: pointer;
+}
+
+.order-btn {
+  display: block;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  background-color: #16DB99;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  border-color: #16DB99;
+}
+
+footer {
+  display: none;
+  background-color: #ECFDF5;
+  color: #065F46;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  margin: 0.5em auto;
+  text-align: center;
+  width: 60%;
+  border: #065F46 1px solid
+}
+
+/* Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* background-color: #474e5d;
+  background-color: rgb(0, 0, 0); */
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 25% auto auto auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-container {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-container input {
+  padding: 1em;
+  margin: 1em 0.5em;
+  border: 1px solid black;
+}
+
+.modal-container h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+
+
+/*  Responsive option for larger screens */
+@media(min-width:601px) {
+  body {
+    max-width: 800px;
+  }
+
+  header {
+    background-size: contain;
+  }
+
+  .food-item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-areas: "nam des btn"
+      "pic des pri";
+    padding: 0em;
+    padding-bottom: 1.5em;
+    border-bottom: #999 1px solid;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .food-desc {
+    font-size: 1.5rem;
+    margin: auto 0 auto 0;
+  }
+
+  .btn-add {
+    margin: 0.5em auto 0 auto;
+  }
+
+  .food-price {
+    font-size: 1.40rem;
+    margin: auto;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 25% auto auto auto;
+    border: 1px solid #888;
+    max-width: 800px;
+    width: 50%;
+  }
+}

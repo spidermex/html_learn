@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <title>Food Delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <!-- <link rel="manifest" href="assets/site.webmanifest"> -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Spider's Burger Shack</h1>
+            <p>The best burgers in Town</p>
+        </header>
+        <main>
+            <section class="food-item-grid">
+                <!-- <img class="food-photo" src="assets/food.jpg" alt="food" /> -->
+                <p class="food-photo">🍕</p>
+                <h2 class="food-name">Food Name</h2>
+                <p class="food-desc">Food Description</p>
+                <p class="food-price">Price: $10</p>
+                <button class="btn-add" type="button" data-add="0">
+                    +</button>
+            </section>
+
+            <section class="food-item-grid">
+                <!-- <img class="food-photo" src="assets/food.jpg" alt="food" /> -->
+                <p class="food-photo">🍔</p>
+                <h2 class="food-name">Food Name</h2>
+                <p class="food-desc">Food Description</p>
+                <p class="food-price">Price: $10</p>
+                <button class="btn-add" type="button" data-add="1">
+                    +</button>
+            </section>
+
+            <section class="food-item-grid">
+                <!-- <img class="food-photo" src="assets/food.jpg" alt="food" /> -->
+                <p class="food-photo">🍺</p>
+                <h2 class="food-name">Food Name</h2>
+                <p class="food-desc">Food Description</p>
+                <p class="food-price">Price: $10</p>
+                <button class="btn-add" type="button" data-add="2">
+                    +</button>
+            </section>
+
+            <section id="order-detail" class="order-detail">
+                <h3>Your Order</h3>
+                <div id="order-rows" class="order-rows">
+                    <div class="order-row">
+                        <p class="order-item"> Item 1
+                            <span class="remove-item">
+                                <button class="remove-item-btn" type="button">remove</button>
+                            </span>
+                        </p>
+                        <p class="item-price"> $Price1</p>
+                    </div>
+
+                    <div class="order-row">
+                        <p class="order-item"> Item 2
+                            <span class="remove-item">
+                                <button class="remove-item-btn" type="button">remove</button>
+                            </span>
+                        </p>
+                        <p class="item-price"> $Price2</p>
+                    </div>
+
+                    <div class="order-row">
+                        <p class="order-item"> Item 3
+                            <span class="remove-item">
+                                <button class="remove-item-btn" type="button">remove</button>
+                            </span>
+                        </p>
+                        <p class="item-price"> $Price3</p>
+                    </div>
+
+                </div>
+                <div id="order-total" class="order-total">
+                    <p class="sum-text"> Order Total</p>
+                    <p class="order-sum">$ 0.00</p>
+                </div>
+                <button id="order-btn" class="order-btn">Complete Order</button>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <!-- <script type="module" src="index.js"></script> -->
+</body>
+
+</html>

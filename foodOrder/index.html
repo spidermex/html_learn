@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <title>Food Delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <!-- <link rel="manifest" href="assets/site.webmanifest"> -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Spider's Burger Shack</h1>
+            <p>The best burgers in Town</p>
+        </header>
+        <main>
+            <section id="menu-container">
+                <!-- Here we render the menu items -->
+            </section>
+            <section id="order-detail" class="order-detail">
+                <h3>Your Order</h3>
+                <div id="order-rows" class="order-rows">
+                    <!-- Here we render the Order Items -->
+                </div>
+
+                <div id="order-total" class="order-total">
+                    <p class="sum-text"> Order Total</p>
+                    <p class="order-sum" id="order-sum">$ 0.00</p>
+                </div>
+
+                <button type="button" id="order-btn" class="order-btn">Complete Order</button>
+            </section>
+        </main>
+        <footer id="the-footer">
+            <p id="order-thanks">Thanks, your order is on its way!</p>
+        </footer>
+    </div>
+
+    <!-- Modal page -->
+    <div id="modal01" class="modal">
+        <form class="modal-content" action="#">
+            <div class="modal-container">
+                <h1>Enter Card Details</h1>
+                <input type="text" name="Full Name" placeholder="Santa Claus" required>
+                <input type="text" name="card number" placeholder="1234 5678 9012 3456"
+                    pattern="\d{4} \d{4} \d{4} \d{4}" required>
+                <input type="number" name="cvv" placeholder="123" pattern="\d{3}" required>
+                <div class="pay-btn">
+                    <button type="submit" id="modal-pay" class="order-btn">Pay</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
