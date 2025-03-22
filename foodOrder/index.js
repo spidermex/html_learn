@@ -1,4 +1,4 @@
-import { menuArray } from "./assets/datos.js"
+import { menuArray } from "./data.js"
 
 // DOM important objects
 const menuContainer = document.getElementById("menu-container")
@@ -34,6 +34,10 @@ function finishOrder() {
     orderArray.splice(0, orderArray.length)
     renderOrder()
     document.getElementById("the-footer").style.display = "block"
+    window.setTimeout(function() {
+        window.location.reload();
+    }, 5000); // 5000 milliseconds = 5 seconds
+    
 }
 
 function removeOrderItem(id) {
