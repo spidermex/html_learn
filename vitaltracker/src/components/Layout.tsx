@@ -1,42 +1,25 @@
 
-import React, { ReactNode, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navigation from './Navigation';
-import { useAuth } from '../context/AuthContext';
-import { initializeStorage } from '../utils/localStorage';
+import React from "react";
+import { Navegacion } from "./Navegacion";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { user } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Initialize local storage
-    initializeStorage();
-    
-    // If no user is logged in, redirect to login page
-    if (!user) {
-      navigate('/');
-    }
-  }, [user, navigate]);
-
-  // If no user, don't render the layout (redirect will happen)
-  if (!user) return null;
-
+export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background flex">
-      <Navigation />
-      
-      <main className="flex-1 ml-0 lg:ml-64 transition-all duration-300 ease-in-out">
-        <div className="container mx-auto py-6 px-4 md:px-6">
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <div className="flex flex-col md:flex-row min-h-screen bg-background">
+        <Navegacion />
+        <main className="flex-1 p-4 md:p-6 relative">
           {children}
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </TooltipProvider>
   );
 };
-
-export default Layout;
