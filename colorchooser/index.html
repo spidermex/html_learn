@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Default Machote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="index.css">
+  <meta name="description" content="Spiders learning Project" />
+  <meta name="author" content="SpiderMx" />
+  <meta property="og:title" content="Spiders Project" />
+  <meta property="og:description" content="Spiders Project" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="#" />
+</head>
+
+
+
+<body>
+  <div id="root" class="root">
+    <header>
+
+      <input id="color-picker" type="color"  value="#f55a5a">
+      <!-- <label for="schemeMode">Choose a mode:</label> -->
+
+      <select name="schemeMode" id="schemeMode">
+        <option value="monochrome">Monocrhome</option>
+        <option value="monochrome-dark">Monochrome-dark</option>
+        <option value="monochrome-light">Monochrome-light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-complement</option>
+        <option value="triad">Triad</option>
+        <option value="quad">Quad</option>
+      </select>
+      <button type="button" id="getColorBtn">Get scheme</button>
+
+    </header>
+    <div id="colors-sample" class="container">
+      <div class="color-cell1">Pick a color</div>
+      <div class="color-cell2"></div>
+      <div class="color-cell3">Choose </div>
+      <div class="color-cell4">an Schema</div>
+      <div class="color-cell5"></div>
+      <div class="color-cell6">Get it!</div>
+    </div>
+
+<!-- 
+    <div id="nombres" class="container2">
+      <div class="color-name tooltip"  >
+        <p data-color="#123456">#123456</p>
+        <span class="tooltiptext" id="tooltip1">Click to copy</span>
+      </div>
+      <div class="color-name tooltip"  >
+        <p>#123456</p>
+        <span class="tooltiptext" id="tooltip2">Click to copy</span>
+      </div>
+      <div class="color-name tooltip"  >
+        <p>#123456</p>
+        <span class="tooltiptext" id="tooltip3">Click to copy</span>
+      </div>
+      <div class="color-name tooltip"  >
+        <p>#123456</p>
+        <span class="tooltiptext" id="tooltip4">Click to copy</span>
+      </div>
+      <div class="color-name tooltip"  >
+        <p>#123456</p>
+        <span class="tooltiptext" id="tooltip5">Click to copy</span>
+      </div>
+      <div class="color-name tooltip"  >
+        <p>#123456</p>
+        <span class="tooltiptext" id="tooltip6">Click to copy</span>
+      </div>
+    </div> -->
+
+
+
+    <div id="colores" class="container">
+
+    </div>
+
+    <div id="nombres" class="container2">
+
+    </div>
+
+
+  </div>
+
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
